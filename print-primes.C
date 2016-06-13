@@ -9,17 +9,16 @@ bool isPrime(int a);
 
 int  main()
 {
-  for (int i = 2; i < 1000; i++){
-    if (isPrime(i)){
+  for (int i = 2; i < 1001; i++){ 	// 1 is a composite
+    if (isPrime(i))
       cout << i << " ";
-    }
   }
   cout << endl;
 }
 
 bool isPrime(int a){
   for (int i = 2; i <= sqrt(a); i++){
-    if ((a % i) == 0)
+    if (!(a % i))
       return false;
   }
   return true;
